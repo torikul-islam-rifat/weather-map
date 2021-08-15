@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Map</title>
+    <link rel="stylesheet" href="../../bootstrap.min.css">
+    <style>
+        body{
+            padding: 30px;
+            margin: 30px;
+        }
+        input{
+            display: inline;
+        }
+        button{
+            /* padding: 10px; */
+            border-radius: 10px;
+            box-shadow: none;
+        }
+        .output{
+            height: 300px ;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <input type="text" class="w-75 form-control"><br><button class="btn btn-success">Search</button>
+    
+    </div>
+   <script>
+       fetch('http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={015f2010f521dd3d75a8fba6578349a8}')
+       .then(res=>res.json())
+       .then(data=>console.log(data))
+   </script>
+</body>
+</html>
